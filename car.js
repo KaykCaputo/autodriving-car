@@ -8,7 +8,7 @@ class Car{
         this.speed=0;
         this.acceleration=0.2;
         this.maxSpeed=4.5;
-        this.friction=0.4;
+        this.friction=0.04;
         this.angle=0;
 
         this.controls= new Controls();
@@ -46,10 +46,11 @@ class Car{
         }
         this.x+=Math.sin(this.angle)*this.speed;
         this.y-=Math.cos(this.angle)*this.speed;
+        console.log(this.controls);
     }
     draw(ctx){
         ctx.save();
-        ctx.translate(this.x,this.y);
+        ctx.translate(this.x, this.y);
         ctx.rotate(this.angle);
 
         ctx.beginPath();
