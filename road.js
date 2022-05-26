@@ -12,6 +12,10 @@ class Road{
         this.botton=infinity;
     }
 
+    getLaneCenter(laneIndex){
+        const lineWidth=this.width/this.laneCount;
+        return this.left+lineWidth/²+laneIndex*lineWidth;
+    }
     draw(ctx){
         ctx.lineWidth=5;
         ctx.strokeStyle="white";
